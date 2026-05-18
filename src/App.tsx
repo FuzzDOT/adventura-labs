@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import { ProductsPage, ProductDetailPage } from './pages/Products';
 import { ResearchPage, AboutPage, BlogPage, BlogPostPage, CareersPage, ContactPage } from './pages/SubPages';
 import { DeterministicPage, InterpretabilityPage, MedicalAIPage } from './pages/ResearchPages';
-import Admin from './pages/Admin';
 import { initReveal } from './hooks/useReveal';
 
 function ScrollReset() {
@@ -37,7 +36,6 @@ export default function App() {
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ScrollReset />
       <Routes>
-        <Route path="/admin" element={<Admin />} />
         <Route path="/" element={<PageLayout><Home /></PageLayout>} />
         <Route path="/products" element={<PageLayout><ProductsPage /></PageLayout>} />
         <Route path="/products/:id" element={<PageLayout><ProductDetailPage /></PageLayout>} />

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import styles from './Admin.module.css';
-
 const MOCK_INQUIRIES = [
   { id: '1', name: 'Sarah Chen', email: 'sarah@sequoiacapital.com', company: 'Sequoia Capital', message: "We've been tracking Adventura Labs. We'd love to discuss Series A timing. VERITAS's determinism architecture is exactly what institutional clients need.", type: 'investor', date: 'May 17, 2026', read: false },
   { id: '2', name: 'Marcus Webb', email: 'm.webb@techcrunch.com', company: 'TechCrunch', message: "Working on a feature on next-gen AI infrastructure. Adventura Labs' approach is the most technically credible I've seen. Brief interview?", type: 'press', date: 'May 17, 2026', read: false },
