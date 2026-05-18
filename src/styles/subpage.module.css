@@ -1,0 +1,77 @@
+/* Shared sub-page layout styles */
+
+.pageWrap {
+  padding-top: var(--nav-h);
+  min-height: 100vh;
+}
+
+/* ─ PAGE HEADER ─ */
+.pageHeader {
+  padding: 80px 0 72px;
+  border-bottom: 1px solid var(--border);
+}
+
+.pageHeaderContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 720px;
+}
+
+/* ─ BODY SECTION ─ */
+.bodySection {
+  padding: var(--section-v) 0;
+}
+
+/* ─ SPLIT ─ */
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* ─ 3-COL ─ */
+.threeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ─ ITEM CARD ─ */
+.itemCard {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 28px;
+  transition: box-shadow 250ms ease, transform 250ms ease;
+  cursor: default;
+}
+
+.itemCard:hover {
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
+}
+
+/* ─ RULE ROW ─ */
+.ruleRow {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
+  align-items: flex-start;
+}
+
+.ruleRow:last-child { border-bottom: 1px solid var(--border); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .splitGrid { grid-template-columns: 1fr; gap: 40px; }
+  .threeGrid { grid-template-columns: 1fr 1fr; }
+  .ruleRow { grid-template-columns: 60px 1fr; gap: 20px; }
+}
+
+@media (max-width: 520px) {
+  .threeGrid { grid-template-columns: 1fr; }
+}
